@@ -7,15 +7,13 @@ pipeline {
         string(name: "Email configurations", defaultValue: "Test", trim: true, description: "Sample string parameter")
     }
     stages {
-        stage("Build") {
+        stage("Email Notification") {
             steps {
+                script{
+                   sh 'python3 -u demoemail.py' 
+                }
                 echo "Build stage."
                 echo "Hello $params.Email_Recipients"
-            }
-        }
-        stage("Test") {
-            steps {
-                echo "Test stage."
             }
         }
     }
