@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("Email Notification") {
             steps {
-                   sh 'python3 -u MonitoringTest/Jenkinsfile $EMAIL_RECIPIENTS' 
+                   echo "Hello World"
             }
         }
     }
