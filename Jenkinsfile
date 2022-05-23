@@ -2,6 +2,7 @@ pipeline {
     agent any
     parameters {
         string(name: "Email recipients", defaultValue: "Test", trim: true, description: "Sample string parameter")
+        string(name: "Email recipients", defaultValue: "Test", trim: true, description: "Sample string parameter")
         text(name: "TEST_TEXT", defaultValue: "Jenkins Pipeline Test", description: "Sample multi-line text parameter")
     }
     stages {
